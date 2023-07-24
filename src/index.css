@@ -1,0 +1,30 @@
+:root{
+  --primary:#5700E5;
+  --brand-colour-sec:#17171C;
+  --neutrals-white-50:#fafafa;
+}
+
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  width: 100%;
+  height: 100vh;
+}
+
+
+/* sidenav css//////////////
+///////////////////////////
+///////////////////////// */
+
+.sidenav{
+  display: inline-flex;
+padding: 8.5rem 1.75rem 33rem 1.75rem;
+flex-direction: column;
+align-items: flex-start;
+gap: 3.5rem;
+}
