@@ -1,6 +1,8 @@
 import React from 'react'
 import Navbar from './Navbar'
 import gameimg from '../assets/gameimg.png'
+import chat from '../assets/chat.svg'
+
 
 
 const Feed = () => {
@@ -40,7 +42,40 @@ const Feed = () => {
 
 </div>
  
+
+
+
+
+ 
   </section>
+
+
+
+<section className="suggested-game-container">
+  <div>  
+    <img src={chat} id='suggested-icon' alt="" />
+    <h2 className="suggested-title">Games just for you</h2>
+  </div>
+
+<article className="suggested-games">
+
+<div className="suggested-game">
+<img src={gameimg} alt="" className="suggested-game-img" />
+<h3>Game of throne</h3>
+<p>Action,Adventure</p>
+<button >Download and Play</button>
+</div>
+
+<div className="suggested-game">
+<img src={gameimg} alt="" className="suggested-game-img" />
+<h3>Grand Thief Auto</h3>
+<p>Action,Mafia</p>
+<button >Download and Play</button>
+</div>
+  </article>
+</section>
+
+
  
  </>
   )

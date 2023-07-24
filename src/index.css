@@ -1,5 +1,4 @@
-
-  @import url('https://fonts.googleapis.com/css2?family=Lexend&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Lexend&family=Roboto&display=swap');
 
 
 *{
@@ -250,4 +249,86 @@ transform: rotate(4.317deg);
 flex-shrink: 0;
 border-radius: 1rem;
 background: url(<path-to-image>), lightgray -0.642px -1.534px / 100% 133.333% no-repeat;
+}
+
+
+
+/* games for you//////////////////
+/////////////////////////////
+//////////////////////////////// */
+
+
+.suggested-game-container{
+  width: 79.5rem;
+height: 31.5rem;
+flex-shrink: 0;
+border-radius: 1rem;
+background: var(--neutrals-white-00, #FFF);
+}
+#suggested-icon{
+  width: 2rem;
+height: 2rem;
+}
+.suggested-title{
+  color: var(--neutrals-black-10, #1A1A1A);
+text-align: center;
+
+/* Headings/Extrasmall/Semi */
+font-family: Lexend;
+font-size: 1.5rem;
+font-style: normal;
+font-weight: 700;
+line-height: 2rem; /* 133.333% */
+}
+.suggested-games{
+  display: flex;
+  gap: 4.5rem;
+}
+.suggested-game{
+  width: 36rem;
+height: 24.75rem;
+
+flex-shrink: 0;
+}
+.suggested-game-img{
+  width: 36rem;
+height: 15rem;
+flex-shrink: 0;
+border-radius: 0.5rem;
+background: url(<path-to-image>), lightgray 50% / cover no-repeat;
+}
+.suggested-game h3{
+  color: var(--neutrals-black-10, #1A1A1A);
+  text-align: left;
+/* Headings/Extrasmall/Med */
+font-family: Lexend;
+font-size: 1.5rem;
+font-style: normal;
+font-weight: 500;
+line-height: 2rem; /* 133.333% */
+letter-spacing: -0.03rem;
+}
+
+.suggested-game p{
+  color: #000;
+  text-align: left;
+/* Body/Small/Med */
+font-family: Inter;
+font-size: 0.875rem;
+font-style: normal;
+font-weight: 500;
+line-height: 1.25rem; /* 142.857% */
+}
+.suggested-game button{
+  display: flex;
+width: 36rem;
+height: 3.5rem;
+padding: 1rem 1.5rem;
+justify-content: center;
+align-items: center;
+gap: 0.5rem;
+flex-shrink: 0;
+border-radius: 0.25rem;
+border: 1px solid var(--neutrals-black-50, #808080);
+background: var(--primary-white, #FFF);
 }
