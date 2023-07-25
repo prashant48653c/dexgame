@@ -72,6 +72,9 @@ const Feed = () => {
 <p>Action,Mafia</p>
 <button >Download and Play</button>
 </div>
+
+
+
   </article>
 </section>
 
@@ -81,6 +84,18 @@ const Feed = () => {
   <h2>More games</h2>
 
   <article className="more-game">
+    <div className="more-game-div">
+      <img src={gameimg} alt="" />
+    </div>
+
+    <div className="more-game-div">
+      <img src={gameimg} alt="" />
+    </div>
+
+    <div className="more-game-div">
+      <img src={gameimg} alt="" />
+    </div>
+
     <div className="more-game-div">
       <img src={gameimg} alt="" />
     </div>
