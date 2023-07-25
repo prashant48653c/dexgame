@@ -15,8 +15,8 @@ function App() {
 
      <main className='main'>
 
-<Navbar/>
-<Feed/>
+     <Navbar/> 
+      <Feed/>
 
 
     </main>

@@ -3,7 +3,8 @@ import chat from '../assets/chat.svg'
 
 const Sidenav = () => {
   return (
-    <aside className='sidenav' >
+    <aside className='sidenav'>
+
 
 <div className="side-icons active">
 <img className='side-icon active-icon ' src={chat} alt="community" />

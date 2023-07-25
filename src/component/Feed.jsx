@@ -52,7 +52,7 @@ const Feed = () => {
 
 
 <section className="suggested-game-container">
-  <div>  
+  <div className='heading'>  
     <img src={chat} id='suggested-icon' alt="" />
     <h2 className="suggested-title">Games just for you</h2>
   </div>
@@ -73,6 +73,39 @@ const Feed = () => {
 <button >Download and Play</button>
 </div>
   </article>
+</section>
+
+
+
+<section className="more-games">
+  <h2>More games</h2>
+
+  <article className="more-game">
+    <div className="more-game-div">
+      <img src={gameimg} alt="" />
+    </div>
+
+    <div className="more-game-div">
+      <img src={gameimg} alt="" />
+    </div>
+
+    <div className="more-game-div">
+      <img src={gameimg} alt="" />
+    </div>
+
+    <div className="more-game-div">
+      <img src={gameimg} alt="" />
+    </div>
+
+    <div className="more-game-div">
+      <img src={gameimg} alt="" />
+    </div>
+
+    <div className="more-game-div">
+      <img src={gameimg} alt="" />
+    </div>
+  </article>
+
 </section>
 
 
