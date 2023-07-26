@@ -8,6 +8,8 @@ import chat from '../assets/chat.svg'
 const Feed = () => {
   return (
  <>
+ <div className="main-container">
+
  <section className="without-download-container ">
     <p className="instand-play">Instant Play</p>
 
@@ -68,6 +70,7 @@ const Feed = () => {
 
 <div className="suggested-game">
 <img src={gameimg} alt="" className="suggested-game-img" />
+
 <h3>Grand Thief Auto</h3>
 <p>Action,Mafia</p>
 <button >Download and Play</button>
@@ -124,6 +127,7 @@ const Feed = () => {
 </section>
 
 
+</div>
  
  </>
   )

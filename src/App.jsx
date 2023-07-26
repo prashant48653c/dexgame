@@ -5,21 +5,26 @@ import './App.css'
 import Sidenav from './component/Sidenav'
 import Navbar from './component/Navbar'
 import Feed from './component/Feed'
+import { useNavigate } from 'react-router-dom'
+import { Route,Router,Routes } from 'react-router-dom'
+import Store from './component/Store'
 
 function App() {
  
-
   return (
     <>
-     <Sidenav/>
+    <Sidenav/>
+   
+ 
 
-     <main className='main'>
-
+     <main className="main">
      <Navbar/> 
-      <Feed/>
+      {/* <Feed/> */}
+      <Store/>
+     </main>
+  
 
-
-    </main>
+   
    
     </>
   )
