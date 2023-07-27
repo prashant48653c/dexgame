@@ -8,6 +8,7 @@ import Feed from './component/Feed'
 import { useNavigate } from 'react-router-dom'
 import { Route,Router,Routes } from 'react-router-dom'
 import Store from './component/Store'
+import Downloader from './component/Downloader'
 
 function App() {
  
@@ -20,7 +21,8 @@ function App() {
      <main className="main">
      <Navbar/> 
       {/* <Feed/> */}
-      <Store/>
+      {/* <Store/> */}
+      <Downloader/>
      </main>
   
 

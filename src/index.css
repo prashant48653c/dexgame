@@ -18,7 +18,11 @@ font-family: 'Lexend';
   height: 174.5rem;
  
 }
-
+.grid-two-colume{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-gap: 2rem;
+}
 
 button{
   border: none;
@@ -27,6 +31,7 @@ button{
 img{
   max-width: 100%;
   max-height: 100%;
+  border: 4px solid red;
 }
 body{
   width: 90rem;
@@ -442,9 +447,10 @@ flex-shrink: 0;
 }
 
 .slideing-img{
-  width: 79.5rem;
+  min-width: 79.5rem;
 height: 29rem;
 flex-shrink: 0;
+background-color: #808080;
 }
 .favorite-games{
 
@@ -454,6 +460,9 @@ justify-content: center;
 align-items: center;
 gap: 60.875rem;
 width: 79.5rem;
+text-align: left;
+flex-shrink: 0;
+
 }
 .slide-icons{
   display: flex;
@@ -467,6 +476,19 @@ width: 79.5rem;
 }
 .favorite-game{
 display: flex;
+
+}
+.favorite-games h3{
+  color: #000;
+  text-align: left;
+  
+  /* Headings/Extrasmall/Semi */
+  font-family: Lexend;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 2rem; /* 133.333% */
+  
 }
 .fav-game{
   width: 25.5rem;
@@ -481,6 +503,7 @@ padding:1rem 1rem  0 1.55rem;
 }
 .fav-img{
   width: 100%;
+  background-color: #676E76;
   height: auto;
   border-radius: 0rem 0rem 0.5rem 0.5rem;
 
@@ -545,9 +568,7 @@ width: 31rem;
 height: 47.5rem;
 flex-shrink: 0;
 }
-.dev-games img{
-  max-width: fit-content;
-}
+
 .dev-games h2{
   color: #000;
 
@@ -557,6 +578,7 @@ font-size: 1.5rem;
 font-style: normal;
 font-weight: 700;
 line-height: 2rem; /* 133.333% */
+margin: 5rem 0rem 2.5rem 0rem;
 }
 
 .dev-info{
@@ -570,6 +592,8 @@ background: var(--neutrals-white-00, #FFF);
   width: 25.5rem;
 height: 11.5rem;
 flex-shrink: 0;
+margin-bottom: 3rem;
+
 }
 .dev-game{
   border-radius: 0rem 0rem 0.5rem 0.5rem;
@@ -605,3 +629,361 @@ font-style: normal;
 font-weight: 400;
 line-height: 1.875rem; /* 150% */
 }
+
+
+
+/* downloader///////////
+/////////////////////
+//////////////////////// */
+
+
+.about-game{
+  width: 50.25rem;
+ border: 2px solid rebeccapurple;
+}
+
+.download-game{
+  width: 27.25rem;
+  height: 55.5rem;
+  flex-shrink: 0;
+}
+.game-images{
+  display: flex;
+width: 50.25rem;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+gap: 2.0625rem;
+margin-bottom: 5rem;
+}
+.game-images > img{
+  width: 50.25rem;
+height: 23.5rem;
+flex-shrink: 0;
+}
+.other-game-images{
+  width: 50.25rem;
+height: 7.25rem;
+}
+.other-game-images img{
+  width: 13.75rem;
+height: 7.25rem;
+flex-shrink: 0;
+border-radius: 0.5rem;
+background: url(<path-to-image>), lightgray -0.476px 0px / 100.433% 100% no-repeat;
+
+/* Normal/Medium */
+box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.12), 0px 0px 0px 1px rgba(103, 110, 118, 0.16), 0px 2px 5px 0px rgba(103, 110, 118, 0.08);
+}
+
+.game-detail{
+  width: 50.25rem;
+height: 16.5rem;
+flex-shrink: 0;
+margin-bottom: 5rem;
+}
+.game-detail h2{
+  color: #000;
+text-align: left;
+margin-bottom: 1rem;
+/* Headings/Extrasmall/Semi */
+font-family: Lexend;
+font-size: 1.5rem;
+font-style: normal;
+font-weight: 700;
+line-height: 2rem; /* 133.333% */
+}
+.game-detail p{
+  color: #000;
+  width: 49.75rem;
+/* Body/Large/Reg */
+font-family: Lexend;
+font-size: 1.125rem;
+font-style: normal;
+font-weight: 400;
+line-height: 1.75rem; /* 155.556% */
+}
+.game-detail button , .show-more{
+  display: flex;
+width: 50.25rem;
+padding: 0.875rem 1.375rem;
+
+justify-content: center;
+
+gap: 0.5rem;
+background: var(--grey-50, #FAFAFA);
+
+/* Shadows/Medium */
+box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.12), 0px 0px 0px 1px rgba(103, 110, 118, 0.16), 0px 2px 5px 0px rgba(103, 110, 118, 0.08);
+
+
+color: var(--primary-black, #000);
+text-align: center;
+
+/* Body/md/Semi Bold */
+font-family: Inter;
+font-size: 1rem;
+font-style: normal;
+font-weight: 600;
+line-height: 1.5rem; /* 150% */
+}
+.game-detail img{
+  width: 1.25rem;
+height: 1.25rem;
+}
+
+.meet-the-dev{
+  display: inline-flex;
+padding-right: 0px;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+gap: 2rem;
+}
+.meet-the-dev h2{
+  color: #000;
+
+/* Headings/Extrasmall/Semi */
+font-family: Lexend;
+font-size: 1.5rem;
+font-style: normal;
+font-weight: 700;
+line-height: 2rem; /* 133.333% */
+margin-bottom: 2rem;
+}
+.logo-rate{
+  display: flex;
+align-items: center;
+gap: 1rem;
+}
+.logo-rate img{
+  width: 16rem;
+height: 9rem;
+border-radius: 0.5rem;
+background: url(<path-to-image>), lightgray 50% / cover no-repeat;
+}
+.logo-rate h4{
+  color: #000;
+
+/* Body/Large/Semi */
+font-family: Lexend;
+font-size: 1.125rem;
+font-style: normal;
+font-weight: 600;
+line-height: 1.75rem; /* 155.556% */
+}
+.logo-rate p{
+  color: #000;
+
+/* Body/Large/Reg */
+font-family: Lexend;
+font-size: 1.125rem;
+font-style: normal;
+font-weight: 400;
+line-height: 1.75rem; /* 155.556% */
+}
+.logo-rate div{
+  display: flex;
+padding: 0rem 1.5rem 3.25rem 0rem;
+flex-direction: column;
+align-items: flex-start;
+gap: 0.875rem;
+}
+
+.reviews{
+  display: flex;
+width: 50.25rem;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+gap: 2rem;
+}
+.reviews h2{
+  color: #000;
+
+/* Headings/Extrasmall/Semi */
+font-family: Lexend;
+font-size: 1.5rem;
+font-style: normal;
+font-weight: 700;
+line-height: 2rem; /* 133.333% */
+}
+
+.rating{
+  display: flex;
+height: 6.5rem;
+justify-content: center;
+align-items: flex-start;
+gap: 9.5rem;
+}
+.box{
+  display: flex;
+flex-direction: column;
+align-items: center;
+gap: 1rem;
+}
+.box p{
+  color: #000;
+
+/* Body/Large/Med */
+font-family: Lexend;
+font-size: 1.125rem;
+font-style: normal;
+font-weight: 500;
+line-height: 1.75rem; /* 155.556% */
+}
+.box h4{
+  color: #000;
+
+/* Headings/Large/Reg */
+font-family: Lexend;
+font-size: 3rem;
+font-style: normal;
+font-weight: 400;
+line-height: 3.75rem; /* 125% */
+letter-spacing: -0.06rem;
+}
+.box div{
+  display: flex;
+justify-content: center;
+align-items: center;
+gap: 0.9375rem;
+}
+.comment{
+  display: flex;
+padding: 1.25rem;
+align-items: flex-start;
+flex-direction: column;
+gap: 1.25rem;
+flex: 1 0 0;
+}
+.pp-detail{
+  display: flex;
+padding-bottom: 0px;
+align-items: center;
+gap: 0.625rem;
+align-self: stretch;
+}
+.pp-detail img{
+  display: flex;
+flex-direction: column;
+align-items: flex-start;
+border-radius: 3rem;
+background: url(<path-to-image>), lightgray 50% / cover no-repeat;
+}
+.pp-detail p{
+  flex: 1 0 0;
+  color: #000;
+
+/* Body/Large/Med */
+font-family: Lexend;
+font-size: 1.125rem;
+font-style: normal;
+font-weight: 500;
+line-height: 1.75rem; /* 155.556% */
+}
+.pp-detail div{
+  display: flex;
+align-items: center;
+
+gap: 0.625rem;
+align-self: stretch;
+}
+.comment .actual-comment{
+  flex: 1 0 0;color: var(--text-txt-primary, #000);
+
+  /* Body/Base/Reg */
+  font-family: Lexend;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5rem; /* 150% */
+}
+.date{
+  display: flex;
+justify-content: space-between;
+align-items: flex-end;
+align-self: stretch;
+}
+.date p{
+  color: var(--text-txt-tertiary, rgba(60, 60, 67, 0.50));
+text-align: center;
+
+/* Body/Small/Reg */
+font-family: Lexend;
+font-size: 0.875rem;
+font-style: normal;
+font-weight: 400;
+line-height: 1.25rem; /* 142.857% */
+}
+.store-more-game{
+  color: #000;
+margin-top: 5rem;
+/* Headings/Extrasmall/Semi */
+font-family: Lexend;
+font-size: 1.5rem;
+font-style: normal;
+font-weight: 700;
+line-height: 2rem; /* 133.333% */
+}
+.store-more-game h2{
+  margin-bottom: 1.94rem;
+}
+.game-list{
+  display: flex;
+  flex-direction: column;
+  gap: 1.94rem;
+}
+
+.store-games{
+  display: inline-flex;
+padding-right: 0px;
+align-items: center;
+gap: 1.5rem;border-radius: 0rem 0.5rem 0.5rem 0rem;
+background: var(--neutrals-white-00, #FFF);
+}
+.store-games img{
+  width: 20.375rem;
+height: 13.5rem;border-radius: 0.5rem 0rem 0rem 0.5rem;
+background: url(<path-to-image>), lightgray -47.259px 0px / 115.622% 100% no-repeat;
+}
+.detail-box{
+  width: 27.125rem;
+height: 10.5rem;
+}
+
+.detail-box h2{
+  color: #000;
+
+  /* Headings/Extrasmall/Semi */
+  font-family: Lexend;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 2rem; /* 133.333% */
+}.detail-box p{
+  width: 23.5rem;
+  color: var(--neutrals-black-10, #1A1A1A);
+
+/* Body/Small/Reg */
+font-family: Lexend;
+font-size: 0.875rem;
+font-style: normal;
+font-weight: 400;
+line-height: 1.25rem; /* 142.857% */
+}
+.detail-box button{
+  display: flex;
+width: 27.125rem;
+padding: 0.75rem 1.25rem;
+flex-direction: column;
+justify-content: center;
+text-align: center;
+align-items: flex-start;
+gap: 0.5rem;
+background: var(--primary-white, #FFF);
+
+/* Shadows/Medium */
+box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.12), 0px 0px 0px 1px rgba(103, 110, 118, 0.16), 0px 2px 5px 0px rgba(103, 110, 118, 0.08);
+}
+

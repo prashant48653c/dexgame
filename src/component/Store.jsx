@@ -33,28 +33,32 @@ const Store = () => {
     </article>
   </section>
 
+  <section className="suggested-game-container">
+  <div className='heading'>  
+  
+    <h2 className="suggested-title">Games just for you</h2>
+  </div>
 
-  <article className="suggested-games">
+<article className="suggested-games">
 
 <div className="suggested-game">
 <img src={gameimg} alt="" className="suggested-game-img" />
-<div>
 <h3>Game of throne</h3>
-<p className='description' >Unleash your criminal ambitions and dominate the streets of Los Santos in the action-packed GTA 5.</p>
-</div>
-
+<p className="description">Unleash your criminal ambitions and dominate the streets of Los Santos in the action-packed GTA 5.</p>
 </div>
 
 <div className="suggested-game">
 <img src={gameimg} alt="" className="suggested-game-img" />
 
 <h3>Grand Thief Auto</h3>
+<p className="description">Unleash your criminal ambitions and dominate the streets of Los Santos in the action-packed GTA 5.</p>
+
 </div>
 
 
 
   </article>
-
+</section>
 
 
 
@@ -94,7 +98,7 @@ const Store = () => {
 
 
 <section className="dev-games">
-<h2>Developer</h2>
+<h2>Find Games By Developers</h2>
 
 <article className="dev-info">
 
