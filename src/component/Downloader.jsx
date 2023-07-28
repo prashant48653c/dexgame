@@ -14,6 +14,8 @@ const Downloader = () => {
 <div className="game-images">
     <img src={gameimg} alt="" />
     <div className="other-game-images">
+
+        
     <img src={gameimg} alt="" />
     <img src={gameimg} alt="" />
     <img src={gameimg} alt="" />
@@ -108,14 +110,14 @@ const Downloader = () => {
 
 
 <section className="store-more-game">
-    <h2>More games</h2>
+    <h2>You may also like</h2>
     <div className="game-list">
         <div className="store-games">
             <img src={gameimg} alt="" />
             <div className='detail-box'>
 
     <h3>Red Dead Redemption 2</h3>
-    <p>gh exactly what you need to know to start an online store fast, written by someone who has built several 7-figure ecommerce businesses from scratch. What’s more, everything has been broken down in step-by-step detail wi</p>
+    <p>Experience the gritty, unforgiving frontier of Red Dead Redemption 2 and forge your path as a gunslinger in a breathtaking....</p>
     <button>Download Now</button>
 
             </div>
@@ -125,8 +127,8 @@ const Downloader = () => {
             <img src={gameimg} alt="" />
             <div className='detail-box'>
 
-    <h3>Red Dead Redemption 2</h3>
-    <p>gh exactly what you need to know to start an online store fast, written by someone who has built several 7-figure ecommerce businesses from scratch. What’s more, everything has been broken down in step-by-step detail wi</p>
+    <h3>Cyberpunk 2077</h3>
+    <p>Experience the gritty, unforgiving frontier of Red Dead Redemption 2 and forge your path as a gunslinger in a breathtaking....</p>
     <button>Download Now</button>
 
             </div>
@@ -150,7 +152,15 @@ const Downloader = () => {
         </article>
 
         <aside className="download-game">
+<img src={gameimg} alt="" className="download-game-img" />
+<div>
+    <p>#1 Top 2013</p>
+    <p>Action, Adventure</p>
+</div>
 
+<button className="download-now">Download Now</button>
+
+<button className="add-wishlist">Add to Wishlist</button>
         </aside>
     </section>
 </div>
