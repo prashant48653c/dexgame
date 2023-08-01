@@ -9,6 +9,8 @@ import { useNavigate } from 'react-router-dom'
 import { Route,Router,Routes } from 'react-router-dom'
 import Store from './component/Store'
 import Downloader from './component/Downloader'
+import { Editor } from './component/Editor'
+import Profile from './component/Profile'
 
 function App() {
  
@@ -22,7 +24,9 @@ function App() {
      <Navbar/> 
       {/* <Feed/> */}
       {/* <Store/> */}
-      <Downloader/>
+      {/* <Downloader/> */}
+      {/* <Editor/> */}
+      <Profile/>
      </main>
   
 
