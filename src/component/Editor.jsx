@@ -14,7 +14,7 @@ export const Editor = () => {
     <p>Change username</p>
     <input type="text" placeholder='John Lobby' />
 
-    <p>Change username</p>
+    <p>Change email</p>
     <input type="email" placeholder='johnlobby23@gmail.com' />
 
 

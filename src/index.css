@@ -1259,7 +1259,7 @@ flex-direction: column;
 justify-content: center;
 align-items: flex-start;
 gap: 0.5rem;
-border-radius: 0.25rem;
+border-radius: 0.26rem;
 background: var(--primary-white, #FFF);
 
 /* Shadows/Medium */
