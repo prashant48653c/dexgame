@@ -4,28 +4,37 @@ import chat from '../assets/chat.svg'
 export const Editor = () => {
   return (
     <>
-<section className="profile-editor">
+    <main className="main-container">
+
+    <section className="profile-editor">
     <h3>Edit profile</h3>
     <p>My Profile</p>
+<div className="image-editor">
+<img src={chat} alt="" />
 
-    <img src={chat} alt="" />
+</div>
 
-
-    <p>Change username</p>
+<div className="inputs-editor">
+<p>Change username</p>
     <input type="text" placeholder='John Lobby' />
 
-    <p>Change email</p>
+</div>
+ 
+   <div className="inputs-editor inputs-editor2">
+   <p>Change email</p>
     <input type="email" placeholder='johnlobby23@gmail.com' />
+   </div>
 
 
-    <img src={chat} alt="" className="icon" />
+   
 
 
     <div className="buttons">
         <button>Cancel</button>
-        <button className='save'>Save</button>
+        <button id='save'>Save</button>
     </div>
 </section>
+    </main>
 
     </>
   )

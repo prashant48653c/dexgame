@@ -3,9 +3,11 @@ import gameimg from '../assets/gameimg.png'
 
 
 const Profile = () => {
+
+ 
   return (
     <>
-
+<main className="main-container">
 <main className="profile">
 
 <section className="profile-cover-container">
@@ -14,12 +16,20 @@ const Profile = () => {
 <div className="user-info">
 <img src={gameimg} alt="" />
 <div>
+
   <h3>Avinash Belbase</h3>
+<button>user</button>
+ 
+
+
   <p>homogmei.com</p>
-</div>
+ 
 </div>
 
-<button>user</button>
+
+
+</div>
+
 </div>
 
 </section>
@@ -30,7 +40,7 @@ taratara
 </section>
 
 </main>
-
+</main>
     </>
   )
 }

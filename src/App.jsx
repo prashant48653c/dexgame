@@ -23,11 +23,11 @@ function App() {
      <main className="main">
 
      {/* <Navbar/>  */}
-      <Feed/>
+      {/* <Feed/> */}
       {/* <Store/> */}
       {/* <Downloader/> */}
-      {/* <Editor/> */}
-      <Profile/>
+      <Editor/>
+      {/* <Profile/> */}
      </main>
   
 
