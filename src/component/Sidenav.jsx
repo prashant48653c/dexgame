@@ -1,9 +1,9 @@
 import React from 'react'
 import chat from '../assets/chat.svg'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate,Link } from 'react-router-dom'
 
 const Sidenav = () => {
- 
+ const navigate=useNavigate();
 
   return (
     <aside className='sidenav'>
@@ -11,23 +11,23 @@ const Sidenav = () => {
 
 <div className="side-icons active">
 
-  <a href="/"> <img className='side-icon active-icon '  src={chat} alt="community" /></a> 
+  <Link to="/"> <img className='side-icon active-icon '  src={chat} alt="community" /></Link> 
 
 </div>
 
 <div className="side-icons">
- <a href="/com">  <img className='side-icon  ' src={chat} alt="community" /></a>
+ <Link  to="/community">  <img className='side-icon  ' src={chat} alt="community" /></Link>
 
 </div>
 
 <div className="side-icons">
-<a href="/u">  <img className='side-icon  ' src={chat} alt="community" /></a>
+<Link to="/store">  <img className='side-icon  ' src={chat} alt="community" /></Link>
 
 
 </div>
 
 <div className="side-icons">
-<a href="/com">  <img className='side-icon  ' src={chat} alt="community" /></a>
+<Link  to="/profile">  <img className='side-icon  ' src={chat} alt="community" /></Link>
 
 
 </div>
