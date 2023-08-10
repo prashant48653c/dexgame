@@ -43,15 +43,19 @@ const Store = () => {
 
 <div className="suggested-game">
 <img src={gameimg} alt="" className="suggested-game-img" />
+<div>
 <h3>Game of throne</h3>
 <p className="description">Unleash your criminal ambitions and dominate the streets of Los Santos in the action-packed GTA 5.</p>
+</div>
 </div>
 
 <div className="suggested-game">
 <img src={gameimg} alt="" className="suggested-game-img" />
-
+<div>
 <h3>Grand Thief Auto</h3>
 <p className="description">Unleash your criminal ambitions and dominate the streets of Los Santos in the action-packed GTA 5.</p>
+</div>
+
 
 </div>
 

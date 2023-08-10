@@ -54,8 +54,11 @@ gap: 0.5rem;
 
 }
 .side-icon:hover{
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-  border-radius: 4px;
+border-radius: 0.5rem;
+
+
+/* Normal/Medium */
+box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.12), 0px 0px 0px 1px rgba(103, 110, 118, 0.16), 0px 2px 5px 0px rgba(103, 110, 118, 0.08);
 }
 
 
@@ -64,9 +67,8 @@ gap: 0.5rem;
 
 
 .active-icon{
-  color: white;
-  
- 
+  background-color: white;
+
 }
 .active-icon:hover{
   box-shadow: none;
@@ -405,7 +407,12 @@ border: 1px solid var(--neutrals-black-50, #808080);
 background: var(--primary-white, #FFF);
 margin: 1.5rem 0;
 }
-
+.suggested-game button:hover{
+  border-radius: 0.1875rem;
+border: 1px solid var(--neutrals-black-20, #333);
+background: var(--neutrals-grey-50, #F6F7F9);
+cursor: pointer;
+}
 
 .more-games{
   border: 1px solid black;
@@ -518,11 +525,16 @@ display: flex;
   background: var(--neutrals-white-00, #FFF);
 padding:1rem 1rem  0 1.55rem;
 }
+.fav-game:hover{
+  
+/* Normal/large */
+box-shadow: 0px 15px 35px 0px rgba(103, 110, 118, 0.08), 0px 5px 15px 0px rgba(0, 0, 0, 0.12);
+}
 .fav-img{
   width: 100%;
   background-color: #676E76;
   height: auto;
-  border-radius: 0rem 0rem 0.5rem 0.5rem;
+ 
 
 }
 .fav-game p{
@@ -557,6 +569,7 @@ font-size: 0.875rem;
 font-style: normal;
 font-weight: 500;
 line-height: 1.25rem; /* 142.857% */
+margin-bottom: 1.58rem;
 }
 .description{
   color: var(--neutrals-black-10, #1A1A1A);
@@ -569,12 +582,28 @@ font-weight: 400;
 line-height: 1.5rem; /* 150% */
 width: 31rem;
 }
+.suggested-games{
+  width: 79.5rem;
+height: auto;
+flex-shrink: 0;
+}
 .suggested-game div{
   padding: 1rem 6.5625rem 2.5rem 1.5rem;
 
 }
-.suggested-game{
-  border: 1px solid hotpink;
+.suggested-game img{
+  width: 39rem;
+height: 17.0625rem;
+flex-shrink: 0;
+}
+.suggested-game p{
+margin-bottom: 2.5rem;
+height: auto;
+}
+.suggested-game:hover{
+ 
+/* Normal/large */
+box-shadow: 0px 15px 35px 0px rgba(103, 110, 118, 0.08), 0px 5px 15px 0px rgba(0, 0, 0, 0.12);
 }
 
 
@@ -582,8 +611,8 @@ width: 31rem;
 
 .dev-games{
   width: 79.5rem;
-height: 47.5rem;
-flex-shrink: 0;
+  height: 33.5rem;
+  flex-shrink: 0;
 }
 
 .dev-games h2{
@@ -600,7 +629,7 @@ margin: 5rem 0rem 2.5rem 0rem;
 
 .dev-info{
   width: 25.5rem;
-  height:auto;
+  height:fit-content;
   flex-shrink: 0;
 background: var(--neutrals-white-00, #FFF);
   
@@ -624,11 +653,14 @@ border-radius: 0rem 0rem 0.5rem 0.5rem;
   display: flex;
 padding-right: 0px;
 margin-bottom: 3rem;
-border: 1px solid goldenrod;
+
+
 
 align-items: flex-start;
 gap: 1rem;
 }
+
+
 .dev-game1 img{
   width: 6.5rem;
   border-radius: 0.25rem;
@@ -1029,6 +1061,13 @@ box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.12), 0px 0px 0px 1px rgba(103, 110, 
 .store-more-game .show-more{
   margin: 3rem 0  5rem 0;
 }
+.detail-box button:hover{
+  border-radius: 0.1875rem;
+background: #E6E6E6;
+
+/* Normal/Small */
+box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.12), 0px 0px 0px 1px rgba(103, 110, 118, 0.16), 0px 2px 5px 0px rgba(103, 110, 118, 0.08);
+}
 
 /* download .game */
 
@@ -1104,6 +1143,13 @@ font-weight: 600;
 line-height: 1.5rem; /* 150% */
 
 
+}
+.download-now:hover{
+  border-radius: 0.1875rem;
+background: #5A05E6;
+
+/* Hover/Primary */
+box-shadow: 0px 1px 1px 0px rgba(87, 0, 229, 0.12), 0px 0px 0px 1px rgba(87, 0, 229, 0.64), 0px 2px 5px 0px rgba(87, 0, 229, 0.08);
 }
 .add-wishlist{
   display: flex;
