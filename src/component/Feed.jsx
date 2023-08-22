@@ -1,11 +1,19 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Navbar from './Navbar'
 import gameimg from '../assets/gameimg.png'
 import chat from '../assets/chat.svg'
+import { fetchData } from '../fetched/fetch'
 
 
 
 const Feed = () => {
+
+
+  useEffect(()=>{
+fetchData("games").then((res)=>{
+  console.log(res)
+})
+  })
   return (
  <>
  <div className="main-container">
