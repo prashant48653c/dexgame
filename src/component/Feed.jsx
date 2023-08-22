@@ -3,17 +3,21 @@ import Navbar from './Navbar'
 import gameimg from '../assets/gameimg.png'
 import chat from '../assets/chat.svg'
 import { fetchData } from '../fetched/fetch'
-
-
+import { setGames } from '../slices/feedslicer'
+import { useDispatch,useSelector } from 'react-redux'
 
 const Feed = () => {
-
+const dispatch=useDispatch()
+const games=useSelector((state)=> state.games)
 
   useEffect(()=>{
 fetchData("games").then((res)=>{
-  console.log(res)
+
+  dispatch(setGames([res.results[0]]))
+  console.log(games)
+ 
 })
-  })
+  },[])
   return (
  <>
  <div className="main-container">
@@ -68,23 +72,30 @@ fetchData("games").then((res)=>{
   </div>
 
 <article className="suggested-games">
+{
 
-<div className="suggested-game">
-<img src={gameimg} alt="" className="suggested-game-img" />
-<h3>Game of throne</h3>
-<p>Action,Adventure</p>
-<button >Download and Play</button>
+games.map((game,i)=>{
+
+<div className="suggested-game" key={i} >
+
+{console.log(game.name)}
+<h1>{game.name}</h1>
+
 </div>
 
-<div className="suggested-game">
+})
+
+
+}
+
+
+{/* <div className="suggested-game">
 <img src={gameimg} alt="" className="suggested-game-img" />
 
-<h3>Grand Thief Auto</h3>
+<h3>Grand Thief </h3>
 <p>Action,Mafia</p>
 <button >Download and Play</button>
-</div>
-
-
+</div> */}
 
   </article>
 </section>
