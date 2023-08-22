@@ -9,7 +9,7 @@ export const Editor = () => {
     <section className="profile-editor">
     <h3>Edit profile</h3>
     <p>My Profile</p>
-<div className="image-editor">
+<div className="image-editor j">
 <img src={chat} alt="" />
 
 </div>
