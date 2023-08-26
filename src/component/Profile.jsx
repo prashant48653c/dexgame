@@ -22,7 +22,7 @@ const Profile = () => {
  
 
 
-  <p>homogmei.com</p>
+  <p>avinash34@gmail.com</p>
  
 </div>
 

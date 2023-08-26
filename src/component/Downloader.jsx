@@ -1,8 +1,16 @@
 import gameimg from '../assets/gameimg.png'
 import chat from '../assets/chat.svg'
-import React from 'react'
+import React, { useEffect } from 'react'
+import { useSelector } from 'react-redux'
+import { fetchData } from '../fetched/fetch'
 
 const Downloader = () => {
+   useEffect(()=>{
+    fetchData("games/0").then((res)=>{
+        console.log(res.result)
+    })
+   },[])
+    
   return (
     <>
 <div className="main-container">

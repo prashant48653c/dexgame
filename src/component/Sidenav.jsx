@@ -21,7 +21,7 @@ const handleButtonClick = (buttonIndex) => {
 </div>
 
 <div className={`side-icons  ${activebtn === 1 ? "active":""}` }   onClick={() => handleButtonClick(1)}>
-    <img className='side-icon ' onClick={()=>navigate("/community")}  src={chat} alt="community" /> 
+    <img className='side-icon ' onClick={()=>navigate("/downloader")}  src={chat} alt="community" /> 
 
 </div>
 

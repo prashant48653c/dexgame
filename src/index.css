@@ -357,6 +357,7 @@ line-height: 2rem; /* 133.333% */
 .suggested-games{
   display: flex;
   gap: 4.5rem;
+  overflow-x: scroll;
 }
 .suggested-game{
   width: 36rem;
@@ -470,6 +471,10 @@ flex-shrink: 0;
 
 }
 
+.div-slide{
+  display: flex;
+  overflow-x: scroll;
+}
 .slideing-img{
   min-width: 79.5rem;
 height: 29rem;

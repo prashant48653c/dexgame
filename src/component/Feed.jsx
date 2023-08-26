@@ -10,13 +10,16 @@ const Feed = () => {
 const dispatch=useDispatch()
 const games=useSelector((state)=> state.games)
 
-  useEffect(()=>{
-fetchData("games").then((res)=>{
+  useEffect( ()=>{
+  
+      fetchData("games").then((res)=>{
+        console.log(res.results)
 
-  dispatch(setGames([res.results[0]]))
-  console.log(games)
- 
-})
+        dispatch(setGames(res.results))
+       
+      })
+    
+
   },[])
   return (
  <>
@@ -72,21 +75,20 @@ fetchData("games").then((res)=>{
   </div>
 
 <article className="suggested-games">
-{
 
-games.map((game,i)=>{
-
-<div className="suggested-game" key={i} >
-
-{console.log(game.name)}
-<h1>{game.name}</h1>
-
-</div>
-
-})
-
-
-}
+{games.length === 0 ? (
+  <p>No games available</p>
+) : (
+  games.map((game, i) => (
+    <div className="suggested-game" key={i} >
+    <img src={game.background_image} alt="game_img" className="suggested-game-img" />
+    
+    <h3>{game.name}</h3>
+   <p>Action,Adventure</p>
+    <button >Download and Play</button>
+    </div> 
+  ))
+)}
 
 
 {/* <div className="suggested-game">
@@ -106,41 +108,23 @@ games.map((game,i)=>{
   <h2>More games</h2>
 
   <article className="more-game">
-    <div className="more-game-div">
-      <img src={gameimg} alt="" />
-    </div>
 
-    <div className="more-game-div">
-      <img src={gameimg} alt="" />
-    </div>
+    { games.length === 0 ?
+     ( <p>No results</p> ):
+      (
+        games.map((game,i)=>{
+          return (
+<div className="more-game-div" key={i} >
+        <img src={game.background_image} alt="game_img" />
+      </div>
+          )
 
-    <div className="more-game-div">
-      <img src={gameimg} alt="" />
-    </div>
+        })
+        
+      )
+    }
 
-    <div className="more-game-div">
-      <img src={gameimg} alt="" />
-    </div>
-
-    <div className="more-game-div">
-      <img src={gameimg} alt="" />
-    </div>
-
-    <div className="more-game-div">
-      <img src={gameimg} alt="" />
-    </div>
-
-    <div className="more-game-div">
-      <img src={gameimg} alt="" />
-    </div>
-
-    <div className="more-game-div">
-      <img src={gameimg} alt="" />
-    </div>
-
-    <div className="more-game-div">
-      <img src={gameimg} alt="" />
-    </div>
+    
   </article>
 
 </section>

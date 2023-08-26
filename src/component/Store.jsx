@@ -1,15 +1,35 @@
 import gameimg from '../assets/gameimg.png'
 import chat from '../assets/chat.svg'
-import React from 'react'
+import React, { useEffect } from 'react'
+import { useSelector } from 'react-redux'
+import { fetchData } from '../fetched/fetch'
 
 const Store = () => {
+  const games=useSelector(state => state.games)
+
+  useEffect(()=>{
+    fetchData("developers/").then((res)=>{
+      console.log(res)
+    })
+    
+  })
   return (
     <>
  <div className="main-container store">
-
-
-    <img src={gameimg} alt="" className="slideing-img" />
+<div className='div-slide' >
+{
+  games.length === 0 ? ( <p>Not found</p> ):
+  (
+    games.map((game,i)=>{
+      return(
+      <img src={game.background_image} key={i} alt="game_img" className="slideing-img" />
+      )
+    })
+  )
+}
  
+</div>
+
 
 
   <section className="favorite-games">
