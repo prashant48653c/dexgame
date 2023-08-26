@@ -3,13 +3,34 @@ import chat from '../assets/chat.svg'
 import React, { useEffect } from 'react'
 import { useSelector } from 'react-redux'
 import { fetchData } from '../fetched/fetch'
+import { useDispatch } from 'react-redux'
+import { setScreenshot,setDetails } from '../slices/downloaderslicer'
 
 const Downloader = () => {
+    const dispatch=useDispatch()
+ const { screenshot, details } = useSelector((state) => state.downloaders);
+
    useEffect(()=>{
-    fetchData("games/0").then((res)=>{
-        console.log(res.result)
+
+    fetchData("games/3498/screenshots").then((res)=>{
+        console.log(res.results)
+        dispatch(setScreenshot(res.results))
+        console.log(screenshot)
     })
-   },[])
+
+    fetchData("games/3498").then((res)=>{
+      
+        dispatch(setDetails(res.description_raw))
+  
+    })
+
+    fetchData("games/3498/game-series").then((res)=>{
+        console.log(res.results)
+      
+    })
+
+
+   },[dispatch])
     
   return (
     <>
@@ -23,10 +44,15 @@ const Downloader = () => {
     <img src={gameimg} alt="" />
     <div className="other-game-images">
 
-        
-    <img src={gameimg} alt="" />
-    <img src={gameimg} alt="" />
-    <img src={gameimg} alt="" />
+    {
+            screenshot.map((img,i)=>{
+              return  (
+<img src={img.image} alt="" key={i} />
+
+                )
+            })
+        } 
+    
 
     </div>
 </div>
@@ -34,7 +60,7 @@ const Downloader = () => {
 
 <section className="game-detail">
     <h2>About the game</h2>
-    <p>Experience the ultimate criminal adventure in the thrilling world of GTA 5! Get ready to immerse yourself in the sprawling city of Los Santos, where chaos reigns and opportunities for mayhem await at every turn. Take on heart-pounding heists, engage in adrenaline-fueled car chases, and unleash explosive shootouts in a captivating open-world environment. With its gripping storyline, stunning graphics and unparalleled freedom....</p>
+    <p>{details.slice(0,500)+"..."}</p>
 
     <button>Show more 
     <img src={chat} alt="" />
@@ -79,17 +105,17 @@ const Downloader = () => {
 <div className="comment">
     <div className="pp-detail">
         <img src={chat} alt="" />
-        <p>Jasmin Homo</p>
+        <p>Prashant Acharya</p>
      
     </div>
 
 
 
     <div className="actual-comment">
-        <p>There’s no other program that walks you through exactly what you need to know to start an online store fast, written by someone who has built several 7-figure ecommerce businesses from scratch. What’s more, everything has been broken down in step-by-step detail with real action plans including finding your niche.</p>
+        <p>Playing this game was an incredible experience that left me thoroughly entertained. From the moment I started, it was clear that a lot of thought had been put into the gameplay mechanics and design. The engaging challenges and well-crafted levels kept me hooked, ensuring that I had a blast every time I played</p>
     </div>
     <div className="date">
-        <p>2076-09-54</p>
+        <p>2080-09-24</p>
     </div>
 </div>
 
@@ -98,17 +124,17 @@ const Downloader = () => {
 <div className="comment">
     <div className="pp-detail">
         <img src={chat} alt="" />
-        <p>Jasmin Homo</p>
+        <p>Safal Poudel</p>
      
     </div>
 
 
 
     <div className="actual-comment">
-        <p>There’s no other program that walks you through exactly what you need to know to start an online store fast, written by someone who has built several 7-figure ecommerce businesses from scratch. What’s more, everything has been broken down in step-by-step detail with real action plans including finding your niche.</p>
+        <p>I have to say, the fun factor of this game is off the charts. Whether I was battling enemies, solving puzzles, or exploring the richly detailed world, I was consistently having a great time. The developers have truly succeeded in creating an immersive environment that's both enjoyable and memorable.</p>
     </div>
     <div className="date">
-        <p>2076-09-54</p>
+        <p>2076-09-11</p>
     </div>
 </div>
 <button className="show-more">Show More  
@@ -120,6 +146,8 @@ const Downloader = () => {
 <section className="store-more-game">
     <h2>You may also like</h2>
     <div className="game-list">
+
+        
         <div className="store-games">
             <img src={gameimg} alt="" />
             <div className='detail-box'>

@@ -76,7 +76,7 @@ const games=useSelector((state)=> state.games)
 
 <article className="suggested-games">
 
-{games.length === 0 ? (
+ {games.length === 0 ? (
   <p>No games available</p>
 ) : (
   games.map((game, i) => (
@@ -88,7 +88,7 @@ const games=useSelector((state)=> state.games)
     <button >Download and Play</button>
     </div> 
   ))
-)}
+)} 
 
 
 {/* <div className="suggested-game">

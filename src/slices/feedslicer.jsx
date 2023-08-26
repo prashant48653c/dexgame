@@ -4,18 +4,18 @@ const initialState = {
   value: 0,
 }
 
-export const counterSlice = createSlice({
+export const feedslicer = createSlice({
   name: 'games',
-  initialState:[],
+  initialState:{},
   reducers: {
   
     setGames: (state, action) => {
-      return action.payload
+    return action.payload
     },
   },
 })
 
 // Action creators are generated for each case reducer function
-export const { setGames } = counterSlice.actions
+export const { setGames } = feedslicer.actions
 
-export default counterSlice.reducer 
+export default feedslicer.reducer 
