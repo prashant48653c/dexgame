@@ -8,7 +8,7 @@ const Store = () => {
   const games=useSelector(state => state.games)
 
   useEffect(()=>{
-    fetchData("developers/").then((res)=>{
+    fetchData("developers").then((res)=>{
       console.log(res)
     })
     

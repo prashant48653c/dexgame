@@ -6,7 +6,7 @@ const initialState = {
 
 export const feedslicer = createSlice({
   name: 'games',
-  initialState:{},
+  initialState:null,
   reducers: {
   
     setGames: (state, action) => {

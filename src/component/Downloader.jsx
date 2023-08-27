@@ -4,7 +4,7 @@ import React, { useEffect } from 'react'
 import { useSelector } from 'react-redux'
 import { fetchData } from '../fetched/fetch'
 import { useDispatch } from 'react-redux'
-import { setScreenshot,setDetails } from '../slices/downloaderslicer'
+import { setScreenshot,setDetails, setGameSeries } from '../slices/downloaderslicer'
 
 const Downloader = () => {
     const dispatch=useDispatch()
@@ -13,25 +13,35 @@ const Downloader = () => {
    useEffect(()=>{
 
     fetchData("games/3498/screenshots").then((res)=>{
-        console.log(res.results)
-        dispatch(setScreenshot(res.results))
-        console.log(screenshot)
+        if(res){
+            console.log(res.results)
+            dispatch(setScreenshot(res.results))
+            console.log(screenshot)
+        }
+       
     })
 
     fetchData("games/3498").then((res)=>{
-      
+      res ?
         dispatch(setDetails(res.description_raw))
-  
+  :
+  console.log("Api problem")
     })
 
     fetchData("games/3498/game-series").then((res)=>{
-        console.log(res.results)
-      
+       
+    res ?
+        dispatch(setGameSeries(res.results))
+        :
+        console.log("Api error")
     })
 
 
    },[dispatch])
     
+
+
+   if(details && screenshot){
   return (
     <>
 <div className="main-container">
@@ -202,7 +212,11 @@ const Downloader = () => {
 </div>
 
     </>
+   
   )
+}else{
+    console.log("Loading")
+   }
 }
 
 export default Downloader

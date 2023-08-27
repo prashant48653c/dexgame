@@ -1,6 +1,6 @@
 import React,{useState} from 'react'
 import chat from '../assets/chat.svg'
-import { useNavigate,Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 const Sidenav = () => {
  const navigate=useNavigate();

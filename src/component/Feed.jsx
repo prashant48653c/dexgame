@@ -20,7 +20,9 @@ const games=useSelector((state)=> state.games)
       })
     
 
-  },[])
+  },[dispatch])
+
+  if(games){
   return (
  <>
  <div className="main-container">
@@ -134,6 +136,9 @@ const games=useSelector((state)=> state.games)
  
  </>
   )
+  }else{
+    console.log("Loading")
+  }
 }
 
 export default Feed
