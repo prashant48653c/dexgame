@@ -6,13 +6,11 @@ import { fetchData } from '../fetched/fetch'
 
 const Store = () => {
   const games=useSelector(state => state.games)
+const {gameSeries}=useSelector(state => state.downloaders)
+ console.log(gameSeries)
+  
 
-  useEffect(()=>{
-    fetchData("developers").then((res)=>{
-      console.log(res)
-    })
-    
-  })
+  if(gameSeries && games){
   return (
     <>
  <div className="main-container store">
@@ -129,20 +127,19 @@ const Store = () => {
     <img src={gameimg} alt="" className="dev-logo" />
     <div className="dev-game">
 
-        <div className="dev-game1">
-            <img src={gameimg} alt="" />
-            <h3>Grand Thief Auto</h3>
-        </div>
+{
+  gameSeries.map((game,i)=>{
+    return(
+      <div className="dev-game1" key={i} >
+      <img src={game.background_image} alt="" />
+      <h3> {game.name}</h3>
+  </div>
+    )
+  })
+}
+       
 
-        <div className="dev-game1">
-            <img src={gameimg} alt="" />
-            <h3>Grand Thief Auto</h3>
-        </div>
-
-        <div className="dev-game1">
-            <img src={gameimg} alt="" />
-            <h3>Grand Thief Auto</h3>
-        </div>
+        
         
     </div>
 </article>
@@ -151,6 +148,7 @@ const Store = () => {
     </div>
     </>
   )
+}
 }
 
 export default Store
