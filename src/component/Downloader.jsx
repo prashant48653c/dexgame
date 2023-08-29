@@ -4,44 +4,49 @@ import React, { useEffect } from 'react'
 import { useSelector } from 'react-redux'
 import { fetchData } from '../fetched/fetch'
 import { useDispatch } from 'react-redux'
-import { setScreenshot,setDetails, setGameSeries } from '../slices/downloaderslicer'
+import { setScreenshot,setDetails, setGameSeries, setDownloadLinks } from '../slices/downloaderslicer'
+import { setGameID } from '../slices/feedslicer'
+import { Link } from 'react-router-dom'
 
 const Downloader = () => {
     const dispatch=useDispatch()
- const { screenshot, details } = useSelector((state) => state.downloaders);
+ const { screenshot, details,downloadLinks } = useSelector((state) => state.downloaders);
+ const {gameID}=useSelector(state=> state.feeds)
 
    useEffect(()=>{
 
-    fetchData("games/3498/screenshots").then((res)=>{
+    fetchData(`games/${gameID}/screenshots`).then((res)=>{
         if(res){
-            console.log(res.results)
+            
             dispatch(setScreenshot(res.results))
-            console.log(screenshot)
+            
         }
        
     })
 
-    fetchData("games/3498").then((res)=>{
-      res ?
-        dispatch(setDetails(res.description_raw))
-  :
-  console.log("Api problem")
+    fetchData(`games/${gameID}`).then((res)=>{
+        dispatch(setDetails(res))
+        console.log(res)
+   
     })
 
-    fetchData("games/3498/game-series").then((res)=>{
-       
-    res ?
-        dispatch(setGameSeries(res.results))
-        :
-        console.log("Api error")
+    
+
+  
+
+    fetchData(`games/${gameID}/stores`).then((res)=>{
+        
+        
+        dispatch(setDownloadLinks(res.results))
+        console.log(downloadLinks)
     })
 
 
    },[dispatch])
     
+ 
 
-
-   if(details && screenshot){
+   if(details && screenshot && downloadLinks){
   return (
     <>
 <div className="main-container">
@@ -70,7 +75,7 @@ const Downloader = () => {
 
 <section className="game-detail">
     <h2>About the game</h2>
-    <p>{details.slice(0,500)+"..."}</p>
+    <p>{details.description_raw.slice(0,500)+"..."}</p>
 
     <button>Show more 
     <img src={chat} alt="" />
@@ -84,7 +89,7 @@ const Downloader = () => {
     <img src={gameimg} alt="" />
     <div>
     <h4>Rockstar Game</h4>
-    <p>Realeased Date: Sep 17, 2013</p>
+    <p>Realeased Date: {details.released}</p>
     </div>
   
 </div>
@@ -97,13 +102,13 @@ const Downloader = () => {
 <div className="rating">
     <div className="box">
         <p>Total reviews</p>
-        <h4>10.0k</h4>
+        <h4>{Math.round(details.ratings_count / 1000) }k</h4>
        
     </div>
 
     <div className="box">
         <p> Average rating</p>
-        <h4>4.0</h4>
+        <h4>{details.rating}</h4>
         
         * * * *
         
@@ -204,7 +209,7 @@ const Downloader = () => {
     <p>Action, Adventure</p>
 </div>
 
-<button className="download-now">Download Now</button>
+<button className="download-now"> <Link to={downloadLinks[0].url} target='_blank' > Download Now </Link></button>
 
 <button className="add-wishlist">Add to Wishlist</button>
         </aside>

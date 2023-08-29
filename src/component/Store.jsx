@@ -1,16 +1,33 @@
 import gameimg from '../assets/gameimg.png'
 import chat from '../assets/chat.svg'
 import React, { useEffect } from 'react'
-import { useSelector } from 'react-redux'
+import { useSelector ,useDispatch} from 'react-redux'
 import { fetchData } from '../fetched/fetch'
+import { setGameID } from '../slices/feedslicer'
+import { setGameSeries } from '../slices/downloaderslicer'
 
 const Store = () => {
-  const games=useSelector(state => state.games)
+
+  const dispatch=useDispatch()
+  const {games ,gameID}=useSelector(state => state.feeds)
 const {gameSeries}=useSelector(state => state.downloaders)
  console.log(gameSeries)
+
+ useEffect(()=>{
+  fetchData(`games/${gameID || 3498 }/game-series`).then((res)=>{
+       
+  
+    dispatch(setGameSeries(res.results))
+    console.log(res)
+
+   
+ 
+})
+ },[])
   
 
   if(gameSeries && games){
+
   return (
     <>
  <div className="main-container store">
