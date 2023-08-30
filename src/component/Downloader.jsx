@@ -4,16 +4,16 @@ import React, { useEffect } from 'react'
 import { useSelector } from 'react-redux'
 import { fetchData } from '../fetched/fetch'
 import { useDispatch } from 'react-redux'
-import { setScreenshot,setDetails, setGameSeries, setDownloadLinks } from '../slices/downloaderslicer'
+import { setScreenshot,setDetails, setGameSeries, setDownloadLinks,setPublisherData } from '../slices/downloaderslicer'
 import { setGameID } from '../slices/feedslicer'
 import { Link } from 'react-router-dom'
 
 const Downloader = () => {
     const dispatch=useDispatch()
- const { screenshot, details,downloadLinks } = useSelector((state) => state.downloaders);
+ const { screenshot, details,downloadLinks ,publisherData} = useSelector((state) => state.downloaders);
  const {gameID}=useSelector(state=> state.feeds)
 
-   useEffect(()=>{
+   useEffect(   ()=>{
 
     fetchData(`games/${gameID}/screenshots`).then((res)=>{
         if(res){
@@ -31,6 +31,15 @@ const Downloader = () => {
     })
 
     
+    fetchData(`games/${gameID}/movies`).then((res)=>{
+       
+        console.log(res)
+        dispatch(setPublisherData(res.results[0].data.max || 'https://youtu.be/fPO76Jlnz6c?si=--d5__WIODj4dwyL'))
+        console.log((res.results[0].data.max))
+       
+    
+    })
+    
 
   
 
@@ -46,7 +55,7 @@ const Downloader = () => {
     
  
 
-   if(details && screenshot && downloadLinks){
+   if(details && screenshot && gameID && downloadLinks && publisherData){
   return (
     <>
 <div className="main-container">
@@ -56,7 +65,7 @@ const Downloader = () => {
 
         <article className="about-game">
 <div className="game-images">
-    <img src={gameimg} alt="" />
+    <img src={screenshot[0].image} alt="" />
     <div className="other-game-images">
 
     {
@@ -86,9 +95,10 @@ const Downloader = () => {
 <section className="meet-the-dev">
 <h2>Meet the developer</h2>
 <div className="logo-rate">
-    <img src={gameimg} alt="" />
+    <img src={details.publishers[0].image_background} alt="" />
     <div>
-    <h4>Rockstar Game</h4>
+    <h4>{details.publishers[0].name}</h4>
+
     <p>Realeased Date: {details.released}</p>
     </div>
   
@@ -203,13 +213,17 @@ const Downloader = () => {
         </article>
 
         <aside className="download-game">
-<img src={gameimg} alt="" className="download-game-img" />
+ 
+<video className="download-game-img" controls >
+  <source src={publisherData} type="video/mp4"/>
+</video>
+
 <div>
     <p>#1 Top 2013</p>
     <p>Action, Adventure</p>
 </div>
 
-<button className="download-now"> <Link to={downloadLinks[0].url} target='_blank' > Download Now </Link></button>
+<button className="download-now"> <Link style={{color:'white',textDecoration:'none'}} to={downloadLinks[0].url} target='_blank' > Download Now </Link></button>
 
 <button className="add-wishlist">Add to Wishlist</button>
         </aside>

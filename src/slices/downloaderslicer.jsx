@@ -10,7 +10,8 @@ export const downloaderslicer = createSlice({
     screenshot:null,
     details:null,
     gameSeries:null,
-    downloadLinks:null
+    downloadLinks:null,
+    publisherData:null,
    
     
   },
@@ -27,6 +28,9 @@ export const downloaderslicer = createSlice({
     },
     setDownloadLinks:(state,action)=>{
 state.downloadLinks=action.payload
+    },
+    setPublisherData:(state,action)=>{
+      state.publisherData=action.payload
     }
   
     
@@ -34,6 +38,6 @@ state.downloadLinks=action.payload
 })
 
 // Action creators are generated for each case reducer function
-export const { setScreenshot , setDetails ,setGameSeries,setDownloadLinks } = downloaderslicer.actions
+export const { setScreenshot , setDetails ,setGameSeries,setDownloadLinks ,setPublisherData} = downloaderslicer.actions
 
 export default downloaderslicer.reducer 
