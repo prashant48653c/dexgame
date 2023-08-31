@@ -1,6 +1,12 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 
 const Createaccount = () => {
+   const navigate=useNavigate()
+
+
+
+
   return (
     <section className='create-account'>
 <h3>Signup</h3>
@@ -19,7 +25,7 @@ const Createaccount = () => {
    <input type="text" />
 </div>
 
-<button>Signup</button>
+<button onClick={()=>navigate("/")} >Signup</button>
 
     </section>
   )

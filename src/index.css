@@ -1490,7 +1490,7 @@ align-items: center;
 gap: 1rem;
 margin-top: 1.5rem;
 }
-.signup-box a{
+.signup-box #linking{
   color: var(--brand-colour-primary, #5700E5);
 text-align: center;
 text-decoration: none;

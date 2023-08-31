@@ -16,10 +16,13 @@ import { useNavigate } from 'react-router-dom'
 const Feed = () => {
   const dispatch = useDispatch()
   const {games , gameID} = useSelector((state) => state.feeds)
+  const {userData}=useSelector(state=>state.auths)
 
 
   useEffect(() => {
 
+
+    
     fetchData("games").then((res) => {
       // console.log(res.results)
 
