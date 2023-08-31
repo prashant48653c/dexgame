@@ -1438,3 +1438,233 @@ flex-shrink: 0;
 background: var(--brand-colour-primary, #5700E5);
 color: white;
 }
+
+
+
+/* signup section */
+
+.signup-box{
+  display: flex;
+ align-items: center;
+  flex-direction: column;
+  width: 29rem;
+height: 34.5rem;
+border-radius: 0.5rem;
+background: #FFF;
+
+
+/* Normal/large */
+box-shadow: 0px 15px 35px 0px rgba(103, 110, 118, 0.08), 0px 5px 15px 0px rgba(0, 0, 0, 0.12);
+}
+
+.signup-box h3{
+  color: #000;
+text-align: center;
+margin-top: 2rem;
+margin-bottom: 5rem;
+/* Headings/Small/Med */
+font-family: Lexend;
+font-size: 1.875rem;
+font-style: normal;
+font-weight: 500;
+line-height: 2.375rem; /* 126.667% */
+}
+.signup-box button{
+  display: flex;
+width: 22.0625rem;
+height: 3.5rem;
+padding: 1rem 1.5rem;
+justify-content: center;
+align-items: center;
+gap: 1rem;
+flex-shrink: 0;
+border-radius: 0.1875rem;
+border: 1px solid var(--neutrals-black-50, #808080);
+background: var(--primary-white, #FFF);
+margin-bottom: 3rem;
+}
+.signup-box div{
+  display: inline-flex;
+flex-direction: column;
+align-items: center;
+gap: 1rem;
+margin-top: 1.5rem;
+}
+.signup-box a{
+  color: var(--brand-colour-primary, #5700E5);
+text-align: center;
+text-decoration: none;
+/* Body/Base/Semi */
+font-family: Lexend;
+font-size: 1rem;
+font-style: normal;
+font-weight: 600;
+line-height: 1.5rem; /* 150% */
+}
+.signup-box p{
+  color: #000;
+text-align: center;
+margin-bottom: 1rem;
+/* Body/Base/Med */
+font-family: Lexend;
+font-size: 1rem;
+font-style: normal;
+font-weight: 500;
+line-height: 1.5rem; /* 150% */
+}
+
+
+
+/* create account section*/
+
+.create-account{
+  padding:  0 5.5rem;
+  width: 29rem;
+height: 34.5rem;
+display: flex;
+align-items: center;
+flex-direction: column;
+border-radius: 0.5rem;
+background: #FFF;
+
+/* Normal/large */
+box-shadow: 0px 15px 35px 0px rgba(103, 110, 118, 0.08), 0px 5px 15px 0px rgba(0, 0, 0, 0.12);
+}
+.create-account h3{
+  color: #000;
+text-align: center;
+margin-top: 2rem;
+margin-bottom: 2.5rem;
+/* Headings/Small/Med */
+font-family: Lexend;
+font-size: 1.875rem;
+font-style: normal;
+font-weight: 500;
+line-height: 2.375rem; /* 126.667% */
+}
+
+.create-account div{
+  margin-bottom: 2rem;
+  display: flex;
+flex-direction: column;
+align-items: flex-start;
+gap: 0.5rem;
+align-self: stretch;
+margin-bottom: 2rem;
+}
+.create-account p{
+  color: var(--neutrals-black-10, #1A1A1A);
+
+/* Body/Base/Med */
+font-family: Lexend;
+font-size: 1rem;
+font-style: normal;
+font-weight: 500;
+line-height: 1.5rem; /* 150% */
+}
+.create-account input{
+  display: flex;display: flex;
+height: 3rem;
+padding: 0.625rem 1rem;
+align-items: center;
+gap: 0.5rem;
+flex: 1 0 0;
+align-self: stretch;
+height: 3rem;
+padding: 0.625rem 1rem;
+align-items: center;
+gap: 0.5rem;
+align-self: stretch;
+border-radius: 0.1875rem;
+border: 1px solid var(--neutrals-grey-30, #CED2D6);
+background: var(--primary-white, #FFF);
+}
+.create-account button{
+  display: flex;
+width: 20rem;
+height: 3.5rem;
+padding: 0.5rem 2rem;
+justify-content: center;
+align-items: center;
+gap: 0.5rem;
+margin-top: 1rem;
+flex-shrink: 0;
+border-radius: 0.1875rem;
+background: var(--brand-colour-primary, #5700E5);
+}
+
+
+
+/* login page css */
+.login-page{
+  width: 29rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column ;
+height: 34.5rem;
+border-radius: 0.5rem;
+background: #FFF;
+
+/* Normal/large */
+box-shadow: 0px 15px 35px 0px rgba(103, 110, 118, 0.08), 0px 5px 15px 0px rgba(0, 0, 0, 0.12);
+}
+.login-page h3{
+  color: #000;
+text-align: center;
+
+/* Headings/Small/Med */
+font-family: Lexend;
+font-size: 1.875rem;
+font-style: normal;
+font-weight: 500;
+line-height: 2.375rem; /* 126.667% */
+margin-top: 2rem;
+margin-bottom: 2.5rem;
+}
+.login-page div{
+  display: flex;
+width: 20rem;
+flex-direction: column;
+align-items: flex-start;
+gap: 0.5rem;
+margin-bottom: 3rem;
+}
+.login-page p{
+  color: var(--grey-700, #454C52);
+
+/* Body/Base/Med */
+font-family: Lexend;
+font-size: 1rem;
+font-style: normal;
+font-weight: 500;
+line-height: 1.5rem; /* 150% */
+}
+.login-page input{
+  display: flex;
+height: 3rem;
+padding: 0.625rem 1rem;
+align-items: center;
+gap: 0.5rem;
+align-self: stretch;
+flex: 1 0 0;
+color: var(--grey-400, #9EA5AD);
+font-family: Lexend;
+font-size: 1rem;
+font-style: normal;
+font-weight: 300;
+line-height: 1.5rem; /* 150% */
+}
+
+.login-page button{
+  display: flex;
+width: 20rem;
+height: 3.5rem;
+padding: 0.5rem 2rem;
+justify-content: center;
+align-items: center;
+gap: 0.5rem;
+flex-shrink: 0;
+border-radius: 0.1875rem;
+background: var(--brand-colour-primary, #5700E5);
+margin-top: 0.5rem;
+}

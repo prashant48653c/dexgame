@@ -13,6 +13,9 @@ import { Editor } from './component/Editor'
 import Profile from './component/Profile'
 import Unlock from './component/Unlock'
 import Community from './component/Community'
+import Createaccount from './Authentication/Createaccount'
+import Login from './Authentication/Login'
+import Signup from './Authentication/Signup'
 function App() {
  
   return (
@@ -38,6 +41,12 @@ function App() {
 <Route  path='/unlock' element={   <Unlock/>  }  />
 
 <Route path='/community' element={ <Community/> } />
+<Route  path='/signup' element={   <Signup/>  }  />
+
+<Route  path='/create' element={   <Createaccount/>  }  />
+<Route  path='/login' element={   <Login/>  }  />
+
+
 
 </Routes>
 </main>
