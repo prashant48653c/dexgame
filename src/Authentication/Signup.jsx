@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { Provider,auth } from '../firebase/config'
 import { signInWithPopup } from 'firebase/auth'
@@ -12,18 +12,23 @@ import { setUserData } from '../slices/authslicer'
 
 const Signup = () => {
   const dispatch=useDispatch()
-  const {userData}=useSelector(state=>state.auths)
+  // const {userData}=useSelector(state=>state.auths)
  
   const navigate=useNavigate();
 
   const handleGoogleClick= async ()=>{
     signInWithPopup(auth,Provider).then((data)=>{
       console.log(data)
-      dispatch(setUserData(data.user))
+      const newdata=JSON.stringify(data)
+     
+      localStorage.setItem("data",newdata)
+    navigate("/")
 
       
     })
   }
+
+  
 
   return (
     <>

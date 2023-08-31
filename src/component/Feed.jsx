@@ -6,6 +6,7 @@ import { fetchData } from '../fetched/fetch'
 import { setGameID, setGames } from '../slices/feedslicer'
 import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
+import { setUserData } from '../slices/authslicer'
 
 
 
@@ -20,6 +21,12 @@ const Feed = () => {
 
 
   useEffect(() => {
+  const mydata = JSON.parse( localStorage.getItem("data") );
+
+    if(mydata){
+      dispatch(setUserData([mydata]))
+console.log(userData)
+    }
 
 
     
@@ -52,7 +59,7 @@ console.log(gameID)
 
 
 
-  if (games ) {
+  if (games && userData ) {
     return (
       <>
         <div className="main-container">

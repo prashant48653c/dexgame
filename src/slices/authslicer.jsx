@@ -14,8 +14,8 @@ export const authslicer = createSlice({
   },
   reducers: {
 
-    setUserData:(state,actions)=>{
-      state.userData=actions.payload
+    setUserData:(state,action)=>{
+      state.userData = action.payload
     }
 
   },
