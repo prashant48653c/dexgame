@@ -11,19 +11,16 @@ const Store = () => {
   const dispatch=useDispatch()
   const {games ,gameID}=useSelector(state => state.feeds)
 const {gameSeries}=useSelector(state => state.downloaders)
- console.log(gameSeries)
+//  console.log(gameSeries)
 
  useEffect(()=>{
-  fetchData(`games/${gameID || 3498 }/game-series`).then((res)=>{
-       
-  
-    dispatch(setGameSeries(res.results))
-    console.log(res)
+  fetchData(`games/${gameID || 5286 }/game-series`).then((res)=>{
 
-   
- 
+    dispatch(setGameSeries(res.results))
+    // console.log(res)
+
 })
- },[])
+ },[dispatch])
   
 
   if(gameSeries && games){
@@ -139,6 +136,8 @@ const {gameSeries}=useSelector(state => state.downloaders)
 <section className="dev-games">
 <h2>Find Games By Developers</h2>
 
+ 
+
 <article className="dev-info">
 
     <img src={gameimg} alt="" className="dev-logo" />
@@ -160,6 +159,8 @@ const {gameSeries}=useSelector(state => state.downloaders)
         
     </div>
 </article>
+
+
 </section>
 
     </div>

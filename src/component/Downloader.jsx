@@ -25,29 +25,17 @@ const Downloader = () => {
     })
 
     fetchData(`games/${gameID}`).then((res)=>{
+        // console.log(res)
         dispatch(setDetails(res))
-        console.log(res)
+       
    
     })
-
-    
-    fetchData(`games/${gameID}/movies`).then((res)=>{
-       
-        console.log(res)
-        dispatch(setPublisherData(res.results[0].data.max || 'https://youtu.be/fPO76Jlnz6c?si=--d5__WIODj4dwyL'))
-        console.log((res.results[0].data.max))
-       
-    
-    })
-    
-
-  
 
     fetchData(`games/${gameID}/stores`).then((res)=>{
         
         
         dispatch(setDownloadLinks(res.results))
-        console.log(downloadLinks)
+       
     })
 
 
@@ -55,7 +43,7 @@ const Downloader = () => {
     
  
 
-   if(details && screenshot && gameID && downloadLinks && publisherData){
+   if(details && screenshot && gameID && downloadLinks ){
   return (
     <>
 <div className="main-container">
@@ -214,9 +202,12 @@ const Downloader = () => {
 
         <aside className="download-game">
  
-<video className="download-game-img" controls >
-  <source src={publisherData} type="video/mp4"/>
-</video>
+    
+
+        <img className='download-game-img' src={details.background_image_additional} />
+
+ 
+
 
 <div>
     <p>#1 Top 2013</p>

@@ -21,7 +21,7 @@ const Feed = () => {
   useEffect(() => {
 
     fetchData("games").then((res) => {
-      console.log(res.results)
+      // console.log(res.results)
 
       dispatch(setGames(res.results))
 
