@@ -1,9 +1,13 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import gameimg from '../assets/gameimg.png'
+import { useDispatch, useSelector } from 'react-redux'
 
 
 const Profile = () => {
-
+const {userData}=useSelector(state=>state.auths)
+  const dispatch=useDispatch()
+  
+console.log(userData)
  
   return (
     <>

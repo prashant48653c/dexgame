@@ -2,6 +2,7 @@ import React from 'react'
 import chat from '../assets/chat.svg'
 import { setUserData } from '../slices/authslicer'
 import { useSelector } from 'react-redux'
+import gameimg from '../assets/gameimg.png'
 
 const Navbar = () => {
 const {userData}=useSelector(state=>state.auths)
@@ -17,7 +18,7 @@ if(userData){
        
       </div>
 
-      <img src={userData[0].user.photoURL } alt="profile" className="avatar" />
+      <img src={gameimg } alt="profile" className="avatar" />
 
 
 
