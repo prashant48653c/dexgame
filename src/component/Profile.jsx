@@ -9,6 +9,7 @@ const {userData}=useSelector(state=>state.auths)
   
 console.log(userData)
  
+if(userData){
   return (
     <>
 <main className="main-container">
@@ -18,15 +19,15 @@ console.log(userData)
 <img src={gameimg} alt="" />
 <div className="user-detail">
 <div className="user-info">
-<img src={gameimg} alt="" />
+<img src={userData[0].user.photoURL===false  ? userData[0].user.photoURL : gameimg }  alt="" />
 <div>
 
-  <h3>Avinash Belbase</h3>
+  <h3>{ userData[0].user.displayName===false ? (userData[0].user.displayName).toUpperCase()  : "Username"}</h3>
 <button>user</button>
  
 
 
-  <p>avinash34@gmail.com</p>
+  <p>{userData[0].user.email}</p>
  
 </div>
 
@@ -47,6 +48,6 @@ taratara
 </main>
     </>
   )
-}
+}}
 
 export default Profile

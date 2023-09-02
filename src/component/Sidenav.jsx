@@ -32,7 +32,7 @@ const handleButtonClick = (buttonIndex) => {
 </div>
 
 <div className={`side-icons  ${activebtn === 3 ? "active":""}` }   onClick={() => handleButtonClick(3)}>
-  <img className='side-icon' onClick={()=>navigate("/unlock")}  src={chat} alt="community" /> 
+  <img className='side-icon' onClick={()=>navigate("/profile")}  src={chat} alt="community" /> 
 
 
 </div>

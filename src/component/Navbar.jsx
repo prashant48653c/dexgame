@@ -17,16 +17,16 @@ if(userData){
         <input type="text" className="search-game" placeholder='Search for any games' />
        
       </div>
-
-      <img src={gameimg } alt="profile" className="avatar" />
+{
+      
+      userData[0].user.photoURL ? <img src={userData[0].user.photoURL} alt="profile" className="avatar" />
+      :  <img src={gameimg} alt="profile" className="avatar" />
+}
 
 
 
     </nav>
-  )
-}else{
-  console.log("Loading")
-}
+  ) }
 } 
 
 export default Navbar
